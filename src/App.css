@@ -1,38 +1,110 @@
+.onlyOnMobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .onlyOnMobile {
+        display: block;
+    }
+}
+
 .App {
-  text-align: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(17, 232, 157);
+    font-family: 'Quicksand', sans-serif;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    font-family: 'Shizuru', cursive;
+    font-weight: normal;
+    font-size: 5em;
+    margin: 20px auto;
+    color: #fff;
+    z-index: 1;
+    text-align: center;
+    filter: blur(1.3px);
+    -webkit-filter: blur(1.3px);
+} 
+
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 3em;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+    align-items: center;
+    text-align: center;
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.inputField {
+    width: 45vw;
+    height: 57px;
+    border-radius: 30px;
+    background-color: rgb(143, 255, 216);
+    box-shadow:rgb(14, 167, 114) 9px 4px 10px;
+    transition: .5s ease-in-out;
+    margin-bottom: 15px;
+
+} 
+
+.inputField[type="text"] {
+    padding-left: 20px;
+    font-size: 1.5em;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    border: none;
+    color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.inputField:focus {
+    outline: none;
+    box-shadow:rgb(16, 164, 112) 12px 6px 12px 1000px;
+    transition: .2s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submitButton {
+    position: absolute;
+    height: 45px;
+    width: 48px;
+    border-radius: 26px;
+    margin: 7px;
+    right: 0;
+    border: none;
+    background-color: white;
+    color: #000;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.15em;
+    box-shadow:inset rgb(14, 167, 114) 0 0 4px 2px;
+    transition: .4s ease-in-out;
 }
+
+.submitButton:hover::after {
+    content: '!';
+}
+
+.submitButton:hover {
+    box-shadow: inset #ee9700 0 0 3px 2px;
+    background-color: #ffca6f;
+    font-size: 1.38em;
+    font-weight: 800;
+    transform: rotate(-17deg);
+    transition: .2s ease-in-out;
+}
+
+
+
+
+
+
+
