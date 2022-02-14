@@ -11,7 +11,8 @@ const App: React.FC = () => {
   const handleAdd = (event: React.FormEvent) => {
     event.preventDefault();
     console.log('in handleAdd', todo);
-    setTodos([...todos, { id: Date.now(), todo: todo, isDone: false }]); //idea spread op, nailed by copilot
+    todo ? setTodos([...todos, { id: Date.now(), todo: todo, isDone: false }]) : alert('Please Enter a Todo!');
+    // setTodos([...todos, { id: Date.now(), todo: todo, isDone: false }]); //idea spread op, nailed by copilot
     setTodo('');
   }
 
