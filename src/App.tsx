@@ -11,10 +11,11 @@ const App: React.FC = () => {
   const handleAdd = (event: React.FormEvent) => {
     event.preventDefault();
     console.log('in handleAdd', todo);
-    setTodos([...todos, { id: Date.now(), todo: todo, isDone: false }]); //idea spread op
+    setTodos([...todos, { id: Date.now(), todo: todo, isDone: false }]); //idea spread op, nailed by copilot
+    setTodo('');
   }
 
-  console.log('Input field is now:', todo);
+  console.log('Lis tis now:', todos);
 
   return (
     <div className="App">
