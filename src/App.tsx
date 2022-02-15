@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { isTemplateTail } from 'typescript';
 import './App.css';
 import InputField from './components/InputField';
+import TodoList from './components/TodoList';
 import { Todo } from './model';
 
 const App: React.FC = () => {
@@ -14,14 +16,21 @@ const App: React.FC = () => {
     todo ? setTodos([...todos, { id: Date.now(), todo: todo, isDone: false }]) : alert('Please Enter a Todo!');
     // setTodos([...todos, { id: Date.now(), todo: todo, isDone: false }]); //idea spread op, nailed by copilot
     setTodo('');
+    console.log('List is now: todos', todos);
   }
 
-  console.log('Lis tis now:', todos);
 
   return (
     <div className="App">
       <h1 className="header">Ts + rEaCt ToDo!</h1>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
+      <TodoList />
+      <ul>
+
+      {todos.map((item) => (
+          <li>{item.todo}</li>
+          ))}
+          </ul>
     </div>
   );
 }
