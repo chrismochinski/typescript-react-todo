@@ -103,7 +103,14 @@ form {
 }
 
 
+/* ! TODO LIST ! */
 
+.todos {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    flex-wrap: wrap;
+}
 
 
 
