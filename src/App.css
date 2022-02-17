@@ -126,7 +126,7 @@ form {
 .todoSingle {
     display: flex;
     width: 29.5%; /* 30% of the page w/ a small gap */
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px 20px ;
     margin-top: 8px;
     background-color: rgb(254, 248, 73);
