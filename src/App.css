@@ -89,7 +89,7 @@ form {
 .inputField:focus {
     outline: none;
     box-shadow:rgb(16, 164, 112) 12px 6px 12px 1300px;
-    /* transition: .2s ease-in-out; */
+    transition: .2s ease-in-out;
 }
 
 .submitButton {
@@ -178,10 +178,22 @@ form {
     border: none;
     text-align: left;
     padding-left: 1vw;
+    transition: 0.2s ease-in-out;
 }
 
-.todoSingleText:focus {
-   outline: none; /* ! heh?? */
+.todoSingleTextDone {
+    flex: 1; /* flex: 1 means that the text will take up the remaining space */
+    border: none;
+    text-align: left;
+    padding-left: 1vw;
+    transition: 0.2s ease-in-out;
+    transform: translateY(-4px) rotate(-3deg);
+
+    color: rgb(138, 135, 43);
+    text-decoration-line:line-through;
+    text-decoration-color: #ff0000;
+    text-decoration-thickness: 4px;
+
 }
 
 .iconBlock {

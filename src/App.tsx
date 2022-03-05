@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { isTemplateTail } from 'typescript';
 import './App.css';
 import InputField from './components/InputField';
@@ -9,6 +9,40 @@ const App: React.FC = () => {
 
   const [todo, setTodo] = useState<string>('');
   const [todos, setTodos] = useState<Todo[]>([]);
+
+
+  useEffect(() => { 
+    console.log(`
+    
+    Thanks for peeping my silly to-to, app, one of my many exercises in React AND TypeScript.
+    Hit me up. I'd love to hear from you!
+    chrismochinski.com
+    github.com/chrismochinski
+    linkedin.com/in/chrismochinski
+
+
+    
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$               $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$                   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$!                      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$  $$$$$$$$$$  $$$$$$$!                         $$$$$$$$  $$$$$$$$$$$  $$$$
+$$$$.  $      $   $$$$$$$          0      0        !$$$$$$$  '$/  /  $' .$$$$$
+$$$$$. !   i  i .$$$$$$$$                           $$$$$$$$. i  i  /! .$$$$$$
+$$$$$$    -- --.$$$$$$$$$                           $$$$$$$$$.--'--'   $$$$$$$
+$$$$$$L         $$$$$^^$$                           $$^^$$$$$'        J$$$$$$$
+$$$$$$$.   .'   ""~   $$$                           $$$   ~""   .   .$$$$$$$$$
+$$$$$$$$.  ;      .e$$$$$!    $$.             .$$  !$$$$$e,      ;  .$$$$$$$$$
+$$$$$$$$$   .$$$$$$$$$$$$!     $$$.         .$$$   $$$$$$$$$$$$.'   $$$$$$$$$$
+$$$$$$$$    .$$$$$$$$$$$$$!     $$ $$$$$$$$'$$    !$$$$$$$$$$$$$.    $$$$$$$$$
+$$$$$$$     $$$$$$$$$$$$$$$$.     $    $$    $   .$$$$$$$$$$$$$$$$     $$$$$$$
+                                 $    $$    $
+                                 $.   $$   .$
+                                  $        $'
+                                   $$$$$$$$'
+    `)
+  }, []);
+
+
 
   const handleAdd = (event: React.FormEvent) => {
     event.preventDefault();
