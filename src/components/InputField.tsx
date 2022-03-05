@@ -25,7 +25,7 @@ const InputField: React.FC<Props> = ({ todo, setTodo, handleAdd }) => {
           value={todo}
           onChange={(event) => setTodo(event.target.value)}
         />
-        <br className="onlyOnMobile" />
+        {/* <br className="onlyOnMobile" /> */}
         <button className="submitButton" type="submit">
           Go
         </button>

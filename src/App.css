@@ -44,16 +44,38 @@ form {
     position: relative;
 }
 
+.input {
+    margin-inline: auto;
+}
+
 .inputField {
     width: 45vw;
     height: 57px;
     border-radius: 30px;
     background-color: rgb(143, 255, 216);
     box-shadow:rgb(14, 167, 114) 9px 4px 10px;
-    transition: .5s ease-in-out;
+    /* transition: .5s ease-in-out; */
     margin-bottom: 15px;
-
+    margin-inline: auto;
 } 
+
+@media (max-width: 768px) {
+    .input {
+        width: 90%;
+    }
+
+    .inputField {
+        width: 90%;
+    }
+    .todos {
+        width: 90%;
+    }
+    .todos_single {
+        width: 100%;
+    }
+
+    
+}
 
 .inputField[type="text"] {
     padding-left: 20px;
@@ -67,7 +89,7 @@ form {
 .inputField:focus {
     outline: none;
     box-shadow:rgb(16, 164, 112) 12px 6px 12px 1300px;
-    transition: .2s ease-in-out;
+    /* transition: .2s ease-in-out; */
 }
 
 .submitButton {
@@ -86,7 +108,14 @@ form {
     text-transform: uppercase;
     font-size: 1.15em;
     box-shadow:inset rgb(14, 167, 114) 0 0 4px 2px;
-    transition: .4s ease-in-out;
+    /* transition: .4s ease-in-out; */
+}
+
+@media (max-width: 768px) {
+    .submitButton {
+       right: 3%;
+     
+    }
 }
 
 .submitButton:hover::after {
@@ -103,7 +132,7 @@ form {
 }
 
 
-/* ! TODO LIST ! */
+/* -------------- ITEMS IN LIST -------------- */
 
 .todos {
     display: flex;
@@ -111,18 +140,19 @@ form {
     width: 80%;
     flex-wrap: wrap;
     padding: 0;
-    transition: .4s ease-in-out;
+    /* transition: .4s ease-in-out; */
 
 }
 
 @media (max-width: 768px) {
     .todos {
        margin-top: 60px;
-       transition: .4s ease-in-out;
+       /* transition: .4s ease-in-out; */
 
     }
 }
 
+/*an unfinished single todo block*/
 .todoSingle {
     display: flex;
     width: 29.5%; /* 30% of the page w/ a small gap */
@@ -132,8 +162,8 @@ form {
     background-color: rgb(254, 248, 73);
     box-shadow:inset rgb(167, 162, 16) 0px -2px 4px 2px;
     transition: .4s ease-in-out;
-
 }
+
 
 @media (max-width: 768px) {
     .todoSingle {
@@ -163,7 +193,6 @@ padding-right: 0.5vw;
     font-size: 20px;
     cursor: pointer;
 }
-
 
 
 

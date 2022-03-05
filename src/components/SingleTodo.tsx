@@ -13,9 +13,17 @@ type Props = {
 };
 
 const SingleTodo = ({ todo, todos, setTodos }: Props) => {
+
+  const handleDone = (id: number) => {
+    console.log('in handleDone:', id);
+    setTodos(todos.map((todo) => (todo.id === id ? { ...todo, isDone: !todo.isDone } : todo)));
+    console.log('todo with id', todo.id,'...is it done?:', todo.isDone);
+  }
+
   return (
     <form className="todoSingle">
-      <h2 className="todoSingleText">{todo.todo}</h2>
+      {/* <h2 className="todoSingleText">{todo.isDone ? <s><i>{todo.todo}</i></s> : <b>{todo.todo}</b>}</h2> */}
+      {todo.isDone ? <h2 className="todoSingleTextDone">{todo.todo}</h2> : <h2 className="todoSingleText">{todo.todo}</h2>}
       <div className="iconBlock">
         <span className="icon">
           <AiOutlineEdit />
@@ -25,7 +33,7 @@ const SingleTodo = ({ todo, todos, setTodos }: Props) => {
           <CgTrash />
         </span>
 
-        <span className="icon">
+        <span className="icon" onClick={() => handleDone(todo.id)}>
           <MdDoneOutline />
         </span>
       </div>
