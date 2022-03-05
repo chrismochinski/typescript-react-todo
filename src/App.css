@@ -173,6 +173,8 @@ form {
     }
 }
 
+
+
 .todoSingleText {
     flex: 1; /* flex: 1 means that the text will take up the remaining space */
     border: none;
@@ -193,8 +195,26 @@ form {
     text-decoration-line:line-through;
     text-decoration-color: #ff0000;
     text-decoration-thickness: 4px;
-
 }
+
+.todoSingleTextInput {
+    flex: 1; /* flex: 1 means that the text will take up the remaining space */
+    border: none;
+    text-align: left;
+    padding-left: 1vw;
+    transition: 0.2s ease-in-out;
+    outline: none;
+    background-color: white;
+    font-size: 1.5em;
+    padding-block: 10px;
+    font-weight: bold;
+    font-family: "Quicksand", sans-serif;
+   
+}
+
+/* .TodoSingleTextInput[type="text"] {
+    caret-shape: underscore;
+}  */
 
 .iconBlock {
 padding-right: 0.5vw;
